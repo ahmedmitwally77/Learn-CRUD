@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD System</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-dark">
+  <!--* CRUD  -->
+  <!--* Create Read Update Delete  -->
+  <div class="form w-75 mx-auto bg-light p-4 mt-4">
+    <div class="contaniner">
+      <h1 class="text-center p-3 bg-dark text-white mb-3 rounded-3 text-uppercase">Crud System</h1>
+      <div class="form-floating mb-3">
+        <input type="name" class="form-control" id="name" placeholder="name@example.com">
+        <label for="floatingInput">Product Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="price" placeholder="name@example.com">
+        <label for="price"> Price</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input list="category" class="form-control" id="cat" placeholder="name@example.com">
+        <label for="cat"> Catogries</label>
+        <datalist id="category">
+          <option>TV</option>
+          <option>Mobile</option>
+          <option>LapTop</option>
+        </datalist>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea class="form-control" id="description" placeholder="Leave a comment here"
+          style="height: 100px"></textarea>
+        <label for="description">Description</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="file" class="form-control" id="imgInput" placeholder="name@example.com">
+        <label for="img"> Price</label>
+      </div>
+    </div>
+    <button type="submit" onclick="addElement()" id="btnSend" class="btn btn-outline-dark w-100 ">Submit</button>
+    <button type="submit" onclick="updateElement()" id="btnUpdate" class="btn btn-outline-warning w-100 d-none">Update</button>
+  </div>
+
+  <div class="content my-5">
+    <div class="container">
+      <input type="search" oninput="searchForProducts(this.value)" class="form-control w-50 mx-auto" id="price" placeholder="Search...">
+      <div class="row m-3 g-3" id="rowData">
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
